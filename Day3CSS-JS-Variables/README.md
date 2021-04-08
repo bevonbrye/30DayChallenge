@@ -1,0 +1,2 @@
+# CSS/JS Varibles 
+- "...CSS variables now provide an alternative means style to our page elements without needing an add-on solution. Also called custom properties, CSS variables let us create our own custom values so our code is easier to understand and edit. Let’s unpack how to use them."
