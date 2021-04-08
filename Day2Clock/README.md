@@ -1,1 +1,1 @@
-Simple digital clock app that uses JavaScript methods to manipulate clock hands and give a realistic clock feeling!
+Simple digital clock app that uses JavaScript methods to manipulate clock hands and give a realistic clock feeling!`
