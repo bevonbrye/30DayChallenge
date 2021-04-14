@@ -61,6 +61,13 @@ html {
     align-items: center;
   }
 
+  .panel > *:first-child { transform: translateY(-100%); }
+  .panel.open-active > *:first-child { transform: translateY(0); }
+  .panel > *:last-child { transform: translateY(100%); }
+  .panel.open-active > *:last-child { transform: translateY(0); }
+
+
+
   .panel p {
     text-transform: uppercase;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
@@ -73,4 +80,5 @@ html {
 
   .panel.open {
     font-size: 40px;
+    flex:5;
   }
