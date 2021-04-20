@@ -26,7 +26,6 @@ function renderMatches() {
                 <span class="population">${place.population}</span>
             </li>
         `
-        
     }).join('')
     suggestions.innerHTML = html
 }; 
