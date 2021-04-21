@@ -6,21 +6,32 @@ cavas.height = window.innerHeight;
 ctx.stokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
+ctx.lineWidth = 50;
 
 //set to false when clicking to draw
 let isDrawing = false;
 let lastX = 0; 
 let lastY = 0;
+let hue = 0
 
 function draw(e){ 
     if(!isDrawing) return; // stop from drawing 
-    console.log(e)
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     ctx.beginPath();
     ctx.moveTo(lastX,lastY);
-    ctx.lineTo(e.offsetX, e.offsetY)
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    //make this one line and descructure it
+    lastX = e.offsetX
+    lastY = e.offsetY
+    hue++
 }
 draw()
 cavas.addEventListener('mousemove', draw)
 cavas.addEventListener('mouseup', () => isDrawing = false)
-cavas.addEventListener('mousedown', () => isDrawing = true)
+cavas.addEventListener('mousedown', (e) => { 
+    isDrawing = true;
+    [lastX,lastY] = [e.offsetX, e.offsetY]
+    
+})
 cavas.addEventListener('mouseout', () => isDrawing = false)
