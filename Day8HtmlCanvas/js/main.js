@@ -15,6 +15,9 @@ let lastY = 0;
 function draw(e){ 
     if(!isDrawing) return; // stop from drawing 
     console.log(e)
+    ctx.beginPath();
+    ctx.moveTo(lastX,lastY);
+    ctx.lineTo(e.offsetX, e.offsetY)
 }
 draw()
 cavas.addEventListener('mousemove', draw)
