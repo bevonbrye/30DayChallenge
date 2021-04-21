@@ -49,3 +49,4 @@ console.log(isEveryOneAdult)
 
   
 
+console.log('you are amaing')
