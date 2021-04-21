@@ -13,6 +13,7 @@ let isDrawing = false;
 let lastX = 0; 
 let lastY = 0;
 let hue = 0
+let direction = true;
 
 function draw(e){ 
     if(!isDrawing) return; // stop from drawing 
@@ -24,7 +25,20 @@ function draw(e){
     //make this one line and descructure it
     lastX = e.offsetX
     lastY = e.offsetY
-    hue++
+    hue++;
+    if(hue >= 360){ 
+        hue=0;
+    }
+    if(ctx.lineWidth >= 50 || ctx.lineWidth <= 1) { 
+        direction = !direction;
+    }
+    // ctx.lineWidth++
+
+    if(direction) { 
+        ctx.lineWidth++;
+    } else { 
+        ctx.lineWidth--;
+    }
 }
 draw()
 cavas.addEventListener('mousemove', draw)
