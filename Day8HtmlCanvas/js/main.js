@@ -32,8 +32,7 @@ function draw(e){
     if(ctx.lineWidth >= 50 || ctx.lineWidth <= 1) { 
         direction = !direction;
     }
-    // ctx.lineWidth++
-
+    
     if(direction) { 
         ctx.lineWidth++;
     } else { 
