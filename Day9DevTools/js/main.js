@@ -7,7 +7,7 @@ function makeGreen() {
 }
 
 // Regular
-
+ // all tips that I already know!!!!!
 // Interpolated
 
 // Styled
@@ -25,9 +25,6 @@ function makeGreen() {
 // Viewing DOM Elements
 
 // Grouping together
-
-
-
 
 // counting
 
